@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body style="pointer-events: auto">
+    <pre
+      id="out"
+      style="
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+        pointer-events: auto;
+        margin: 0;
+        font-family: monospace;
+      "
+    ></pre>
+
+    <script>
+      (async () => {
+        const PDS_URL = "teal.town";
+        // --- fetch server info ---
+        const serverInfo = await fetch(
+          `https://${PDS_URL}/xrpc/com.atproto.server.describeServer`
+        )
+          .then((r) => r.json())
+          .catch(() => ({}));
+
+        const email = serverInfo.contact?.email || "admin@teal.town";
+        const links = serverInfo.links || {};
+
+        // --- fetch & build neighbors ---
+        const listUrl = `https://${PDS_URL}/xrpc/com.atproto.sync.listRepos?limit=9`;
+        const repos = await fetch(listUrl)
+          .then((r) => r.json())
+          .catch(() => ({ repos: [] }));
+        const dids = (repos.repos || []).map((r) => r.did).filter(Boolean);
+
+        const handles = await Promise.all(
+          dids.map(async (did) => {
+            try {
+              const url = new URL(
+                "https://slingshot.mmatt.net/xrpc/com.bad-example.identity.resolveMiniDoc"
+              );
+              url.searchParams.set("identifier", did);
+              const res = await fetch(url).then((r) => r.json());
+              return { handle: res.handle || null, did };
+            } catch {
+              return null;
+            }
+          })
+        );
+
+        const valid = handles.filter(Boolean);
+        const cols = 3;
+        const gap = "     ";
+
+        const lines = [
+          `welcome to teal.town!`,
+          ``,
+          `<a target="_blank" href="https://pdsmoover.com/moover/teal.town">move to town!</a>`,
+          ``,
+          `contact your webmaster:`,
+          ` \\ o /`,
+          `   |   <a href="mailto:${email}">${email}</a>`,
+          `  / \\`,
+          ``,
+        ];
+
+        // --- legal stuff (links left, guy right) ---
+        if (links.privacyPolicy || links.termsOfService) {
+          const ppPlain = links.privacyPolicy
+            ? `privacy policy: ${links.privacyPolicy}`
+            : "";
+          const tosPlain = links.termsOfService
+            ? `terms of service: ${links.termsOfService}`
+            : "";
+          const longest = Math.max(ppPlain.length, tosPlain.length);
+          const offset = longest + 10;
+
+          lines.push(`legal stuff:`);
+          if (links.privacyPolicy) {
+            const plain = `privacy policy: ${links.privacyPolicy}`;
+            const padded = plain.padEnd(offset, " ");
+            const html = padded.replace(
+              links.privacyPolicy,
+              `<a href="${links.privacyPolicy}">${links.privacyPolicy}</a>`
+            );
+            lines.push(html + ` \\ o / `);
+          }
+          if (links.termsOfService) {
+            const plain = `terms of service: ${links.termsOfService}`;
+            const padded = plain.padEnd(offset, " ");
+            const html = padded.replace(
+              links.termsOfService,
+              `<a href="${links.termsOfService}">${links.termsOfService}</a>`
+            );
+            lines.push(html + `💼 |`);
+          }
+          lines.push("".padEnd(offset, " ") + `  / \\`);
+          lines.push(``);
+        }
+
+        lines.push(`meet your neighbors:`);
+
+        for (let r = 0; r < valid.length; r += cols) {
+          const chunk = valid.slice(r, r + cols);
+          const strip = [[], [], [], [], []]; // 5 rows: head, arms, legs, handle, icons
+
+          for (const { handle, did } of chunk) {
+            const len = handle.length;
+            const pad = (len - 5) / 2;
+            const p1 = Math.max(0, Math.ceil(pad));
+            const p2 = Math.max(0, Math.floor(pad));
+
+            if (handle === "bailey.teal.town") {
+              strip[0].push(" ".repeat(p1) + "\\ 🤠 /" + " ".repeat(p2));
+            } else {
+              strip[0].push(" ".repeat(p1) + "\\ o /" + " ".repeat(p2));
+            }
+            strip[1].push(" ".repeat(p1 + 2) + "|" + " ".repeat(p2 + 2));
+            strip[2].push(" ".repeat(p1 + 1) + "/ \\" + " ".repeat(p2 + 1));
+            strip[3].push(handle);
+
+            const icons = `<a href="https://bsky.app/profile/${did}">🦋</a> <a href="https://pdsls.dev/at://${did}">📁</a>`;
+            // Use same padding as head row for perfect alignment with ASCII art
+            strip[4].push(" ".repeat(p1) + icons + " ".repeat(p2));
+          }
+
+          for (const row of strip) lines.push(row.join(gap));
+          lines.push(""); // blank line between 3-person rows
+        }
+
+        const pre = document.getElementById("out");
+        pre.innerHTML += lines.join("\n");
+      })();
+    </script>
+  </body>
+</html>
