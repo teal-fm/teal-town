@@ -5,7 +5,7 @@
 /   \
 
 **Last Updated: January 9, 2026**
-See History: https://tangled.org/teal.fm/teal-town
+See History: https://github.com/teal-fm/teal-town/commits/main/legal/tos.txt
 
 ## Acceptance of Terms
 

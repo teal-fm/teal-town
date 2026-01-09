@@ -5,7 +5,7 @@
 /   \
 
 **Last updated January 9, 2026**
-See History: https://tangled.org/teal.fm/teal-town
+See History: https://github.com/teal-fm/teal-town/commits/main/legal/privacypolicy.txt
 
 This Privacy Notice explains how teal computing LLC ("Teal", "we", or "us") collects and treats information through the teal.town ATProto Personal Data Server (PDS), our website teal.town, and the services we offer (collectively, our "Services"). This Privacy Notice is governed by and part of our Terms of Service. Any terms defined in the Terms of Service have the same meaning when used in this Privacy Notice.
 
