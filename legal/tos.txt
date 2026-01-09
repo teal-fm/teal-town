@@ -1,0 +1,255 @@
+# Terms of Service for teal.town
+
+\ o /
+  |
+/   \
+
+**Last Updated: January 9, 2026**
+See History: https://github.com/teal-fm/teal-town/commits/main/legal/tos.txt
+
+## Acceptance of Terms
+
+By creating an account on teal.town or migrating an existing ATProto account, you agree to comply with these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use our service.
+
+These Terms of Service (or "Terms") are a binding contract between teal computing LLC ("Teal", "we", or "us") and you, and govern your use of the teal.town ATProto Personal Data Server (PDS) platform and the services we offer (collectively, our "Services"). Any capitalized terms we use in these Terms without defining them have the definitions given to them in our Privacy Policy.
+
+**THESE TERMS INCLUDE A CLASS ACTION WAIVER AND AN ARBITRATION PROVISION THAT GOVERNS ANY DISPUTES BETWEEN YOU AND TEAL.** Section headings are for the convenience of the parties and do not affect the meaning or interpretation of the agreement.
+
+## Eligibility & Acceptance
+
+- **You must be a legal adult to use the Services.**
+- **We do not knowingly serve anyone who is not a legal adult.**
+- **By using the Services or clicking "Accept," you agree to these Terms in their entirety.**
+
+To be eligible to use the Services, you must be at least 18 years old or the legal age of majority in your jurisdiction, have the legal authority to enter into a binding contract, and have never been previously suspended or removed from the Services.
+
+You accept the Terms by clicking to accept or agree to the Terms where this option is made available to you, or by simply creating an account or accessing the Services. **BY ACCESSING THE SERVICES, YOU AGREE TO BE UNCONDITIONALLY BOUND BY THESE TERMS.** If you access the Services on behalf of a company or other entity ("Entity"), you represent, agree, and warrant that you are authorized to act on behalf of the Entity and to bind such Entity to these Terms.
+
+## Account Registration
+
+- **You must register and create an account.**
+- **You are responsible for maintaining the security of your account credentials.**
+- **You must provide accurate information during registration and keep your contact information up to date.**
+
+By registering, you agree to provide us with accurate and complete information. The information we collect during registration and how we use that information is described in our Privacy Policy. Your credentials are for your individual use only and shall not, under any circumstances, be shared, distributed, or otherwise made available to any person or entity. 
+
+You accept responsibility for all activity that occurs under your account. You may not use false identities, impersonate any other person, or use credentials that you are not authorized to use. You are solely responsible for ensuring the security and confidentiality of your login credentials and account. We are not liable for any loss or damage arising out of your failure to maintain your account security. You agree to notify us immediately at legal@teal.fm of any suspected theft, loss, or fraudulent use of your login or password.
+
+## Services
+
+- **Teal grants you a limited license to use the Services.**
+- **The Services are licensed, not sold.**
+
+### Ownership
+The Services and contents thereof (e.g., all software, designs, trademarks, and content) are protected by U.S. and foreign copyright, trademark, trade dress, or other proprietary right laws and international conventions. Neither these Terms nor your use of the Services transfers any right, title, or interest in the Services to you. All rights not expressly granted under these Terms are reserved by Teal.
+
+### License Grant
+Teal hereby grants you a limited, revocable, non-exclusive, non-transferable right during the term of these Terms to use the Services solely for hosting your ATProto account and related personal data, and only in accordance with these Terms. The Services are licensed, not sold.
+
+### ATProto PDS Features
+teal.town operates as a Personal Data Server on the AT Protocol network. As a registered user, you may:
+
+- **Host your ATProto identity and data** on our infrastructure
+- **Publish content** to the ATProto network through supported applications (such as Bluesky)
+- **Manage your account settings** including authentication and data preferences
+- **Migrate your account** to another PDS at any time using standard ATProto migration tools
+
+### Service Availability
+We strive to maintain reliable service but cannot guarantee 100% uptime. The service is provided "as is" without warranties of any kind. We may modify, suspend, or discontinue the service at any time with or without notice. We will use commercially reasonable efforts to maintain availability of the Services and notify you of planned downtime.
+
+### Updates
+Teal is actively developing and maintaining the Services. From time to time, we may, in our sole discretion, develop and provide updates to the Services, which may include upgrades, bug fixes, patches, other error corrections, and/or new features (collectively, "Updates"). You agree that we have no obligation to provide any Updates or to continue to provide or enable any features. You agree that all Updates will be deemed part of the Services and be subject to these Terms.
+
+## Acceptable Use
+
+- **You agree to use the Services in compliance with the acceptable use requirements outlined below.**
+- **You must notify legal@teal.fm if you become aware of any unauthorized use.**
+
+### Use Requirements
+You agree to use the Services in compliance with these Terms and all applicable laws and regulations. When using our service, you must not:
+
+- Create accounts solely for the purpose of spamming or harassment
+- Engage in spam, bulk messaging, or automated posting that disrupts the network
+- Post illegal content or content that violates the rights of others
+- Impersonate others or misrepresent your identity
+- Attempt to gain unauthorized access to the server or other users' accounts
+- Use the service to distribute malware or conduct phishing attacks
+- Engage in any activity that could harm the server or other users
+- Use the Services in any manner that is illegal, harmful, abusive, defamatory, harassing, or discriminatory
+- Infringe on the intellectual property rights of others
+- Create fake content or misleading information
+
+### Automated Accounts and Bots
+Automated accounts and bots are permitted on teal.town, provided they comply with these terms. Bot accounts must:
+
+- Clearly identify themselves as automated accounts
+- Not engage in spam or disruptive behavior
+- Respect rate limits and not place excessive load on the server
+- Comply with all other terms of service and applicable laws
+
+### Content and Conduct
+Your public content on the ATProto network is subject to the community guidelines of the applications you use (such as Bluesky's Community Guidelines). While we operate independently as a PDS provider, we expect users to maintain respectful conduct across the ATProto network.
+
+We reserve the right to remove content or suspend accounts that violate these terms, applicable laws, or pose a risk to the service or other users.
+
+### Protection Against Unauthorized Use
+You agree to use reasonable efforts to prevent any unauthorized use of the Services and to promptly notify us at legal@teal.fm if any unauthorized use comes to your attention. If there is unauthorized use by anyone who obtained access to the Services directly or indirectly through your account, you agree to take all steps reasonably necessary to terminate the unauthorized use.
+
+### Use Restrictions
+You agree to not, and will not permit or authorize third parties to:
+
+- Use the Services for any illegal purpose or in violation of any local, state, national, or international law
+- Violate any right of a third party, including by infringing or misappropriating any third-party intellectual property right
+- Rent, lease, or otherwise permit third parties to use the Services
+- Use the Services to provide services to third parties (e.g., as a service bureau)
+- Modify, translate, reverse engineer, decompile, disassemble, or otherwise derive the source code or the underlying ideas, algorithms, structure, or organization of the Services
+- Use or access the Services in a manner that materially impacts or burdens us or our servers, or that interferes with our ability to make available any product or service to any third party
+- Perform any fraudulent activity including impersonating any person or entity, claiming a false affiliation, or accessing any other account on the Services without permission
+- Circumvent or disable any security or other technological features or measures of the Services
+- Attempt to circumvent your permitted access to Services or use parameters, including via the creation of multiple accounts using different email addresses
+
+If Teal, in its sole and reasonable discretion, suspects that you have breached any of the acceptable use requirements, it may immediately terminate these Terms and your access to the Services.
+
+## User Content
+
+- **You own and are responsible for your User Content and you grant us a license to use it.**
+
+You retain all right, title, and interest in all data, information, or other content that you disclose or otherwise make available to us through the Services ("User Content"). You hereby grant Teal a non-exclusive, worldwide, royalty-free, fully paid, sublicensable, transferable license to use, modify, adapt, publish, distribute, process, transmit, and display your User Content as necessary to provide and maintain the Services.
+
+By providing User Content to us, you represent and warrant that:
+
+- You have all rights necessary to grant us the licenses set forth in this Section
+- Your collection, use, and disclosure of the User Content complies with all applicable privacy and data protection laws
+- The User Content and the use thereof does not and will not infringe, violate, or misappropriate any third-party right, including any copyright, trademark, patent, trade secret, moral right, privacy right, right of publicity, or any other intellectual property or proprietary right
+- You are solely responsible for maintaining and backing up your User Content
+
+## Account Portability
+
+- **One of the benefits of ATProto is account portability.**
+- **You may migrate your account to another PDS at any time.**
+
+You may migrate your account to another Personal Data Server at any time using standard ATProto migration tools. We will cooperate with legitimate migration requests and provide reasonable assistance to facilitate account portability as supported by the AT Protocol.
+
+## Data Protection
+
+- **You consent to our privacy practices as described in our Privacy Policy.**
+
+Teal treats all personal information processed through the Services in accordance with our Privacy Policy, incorporated herein by this reference. By using Services in any manner, you consent to our Privacy Policy. We implement and maintain commercially reasonable organizational and technical measures that are designed to prevent unauthorized or unlawful access, use or disclosure of data on the Services.
+
+Upon termination of your account, your private data will be deleted in accordance with our Privacy Policy, but your public ATProto data may persist on other servers in the network due to the distributed nature of the AT Protocol.
+
+## Third-Party Services
+
+- **We are not responsible for Third-Party Services that may be integrated with the Services.**
+
+The Services operate on the AT Protocol network and may integrate with third-party applications, services, and tools ("Third-Party Services"), including Bluesky and other ATProto applications. You agree that such Third-Party Services may have access to your User Content as part of the ATProto network architecture.
+
+Third-Party Services are not under our control, and, to the fullest extent permitted by law, we are not responsible for any activities by or outcomes of using a Third-Party Service, including the removal or restriction of your access or User Content. Additionally, Teal shall have no liability to you whatsoever in the event Third-Party Services become unavailable or unusable for any reason or otherwise reduce or eliminate our ability to provide you with the Services.
+
+You are responsible for complying with the terms of service of any third-party applications you use to access the ATProto network through your teal.town account.
+
+## Fees & Payment
+
+teal.town is currently provided as a free service. We reserve the right to introduce fees for the Services in the future. If we do so, we will provide advance notice and you will have the opportunity to migrate your account to another PDS before any fees take effect.
+
+## Indemnification
+
+- **You agree to indemnify us.**
+
+You agree to indemnify, defend (at our option), and hold harmless Teal and its owners, officers, directors, members, employees, and agents (the "Teal Indemnitees") from and against any and all claims, losses, damages, liabilities and expenses, including legal fees and expenses, resulting from or arising out of your:
+
+- Violation of these Terms
+- Negligent, willful misconduct, fraud, or strict liability
+- Any use, misuse and/or access of the Services
+- Violation of any applicable law
+- Your activity or content on the ATProto network or through any Third-Party Service
+- Violation of the rights of any third party, or any breach of the representations, warranties, and covenants made by you herein
+
+We reserve the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate with our defense of these claims.
+
+## Limitation of Liability
+
+- **Our potential liability under these Terms is limited.**
+
+IN NO EVENT WILL TEAL OR THE TEAL INDEMNITEES BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE SERVICES, ANY THIRD-PARTY SERVICES, ANY CONTENTS OR THE CONTENT OF THIRD-PARTY SERVICES, OR ANY USER CONTENT OR OTHER MATERIALS VIEWED OR OBTAINED THROUGH THE SERVICES, OR THE ACTION OR INACTION OF ANY USER OR THIRD PARTY, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, PERSONAL INJURY, PAIN AND SUFFERING, EMOTIONAL DISTRESS, LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT, OR OTHERWISE, EVEN IF FORESEEABLE.
+
+teal.town is provided as a community service. To the fullest extent permitted by law, we are not liable for any damages arising from your use of the service, including but not limited to data loss, service interruptions, or security breaches.
+
+## Termination
+
+- **We reserve the right to suspend or terminate accounts that violate these terms.**
+- **You may delete your account at any time.**
+
+We reserve the right to suspend or terminate accounts that violate these terms without prior notice or for any reason in our sole discretion. You may also delete your account at any time through your account settings or by contacting us at legal@teal.fm.
+
+Upon termination, your private data will be deleted in accordance with our Privacy Policy, but your public ATProto data may persist on other servers in the network. You are encouraged to migrate your account to another PDS before deletion if you wish to maintain your ATProto identity.
+
+These Terms are in effect from the first date you access the Services until you discontinue all use of the Services and delete your account. Upon deletion of your account, you must immediately discontinue use of the Services. All license and rights granted to you under these Terms automatically terminate upon account deletion or termination.
+
+## Dispute Resolution
+
+- **You will attempt to resolve Disputes informally before bringing a formal claim.**
+- **All Disputes will be resolved by arbitration.**
+- **You will not bring or participate in a class action against us.**
+- **Claims must be brought within 1 year of the date it arose.**
+
+**READ THIS SECTION CAREFULLY. IT MAY SIGNIFICANTLY AFFECT YOUR LEGAL RIGHTS, INCLUDING YOUR RIGHT TO FILE A LAWSUIT IN COURT.** You agree that any dispute between you and Teal arising out of or relating to the Services or these Terms (collectively, "Disputes") will be governed by this Section.
+
+### Informal Dispute Resolution
+Before filing a claim against us, you agree to try to resolve the Dispute informally by contacting legal@teal.fm. We will contact you by email as part of a good faith effort to resolve the Dispute informally. If a Dispute is not resolved within 30 days after submission, you or we may bring a formal proceeding.
+
+### Arbitration Agreement
+You and Teal each agree to resolve any Disputes through final and binding arbitration. JAMS will administer the arbitration under its streamlined rules. The arbitration will be held in a mutually agreed upon location in the United States. Notwithstanding the foregoing, either you or we may assert claims, if they qualify, in small claims court. Either party may bring a lawsuit solely for injunctive relief to stop unauthorized use or abuse of the Services or infringement of intellectual property rights without first engaging in arbitration or the informal dispute resolution process described above.
+
+### Class Action Waiver
+You may only resolve Disputes with us on an individual basis and may not bring a claim as a plaintiff or a class member in a class, consolidated, or representative action. Class arbitrations, class actions, private attorney general actions, and consolidation with other arbitrations are not allowed under these Terms. **YOU AND TEAL AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR OUR INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.**
+
+### Waiver of Jury Trial
+To the extent that the Arbitration Agreement herein does not apply or is held unenforceable, each party acknowledges and agrees that any controversy that may arise under these Terms is likely to involve complicated and difficult issues and, therefore, each such party irrevocably and unconditionally waives any right it may have to a trial by jury.
+
+### Limitation on Claims
+Regardless of any statute or law to the contrary, any claim or cause of action arising out of or related to your use of the Services must be filed within one (1) year after such claim or cause of action arose, or else that claim or cause of action will be barred forever.
+
+## Changes to Terms
+
+We may update these Terms of Service from time to time in our sole discretion. Material changes will be communicated by updating the "Last Updated" date at the top of this document and, where appropriate, by email notification. Continued use of the service after changes constitutes acceptance of the updated terms.
+
+## General
+
+- **These Terms (with the documents referenced in these Terms) are the entire agreement between you and us with respect to the Services.**
+- **You agree to use the Services in compliance with U.S. export control laws.**
+- **You may not assign these Terms to anyone else without our consent.**
+
+### Geographic Limitations
+The Services are provided from our headquarters in the United States. We make no representation that the Services comply with legal or regulatory requirements of jurisdictions outside the United States. If you use the Services from other jurisdictions, such use is at your own initiative, and you are solely responsible for compliance with applicable local laws.
+
+### Governing Law
+Except as otherwise required by applicable law, the Terms and the resolution of any Disputes shall be governed by and construed in accordance with the laws of the State of Delaware without regard to its conflict of laws principles. The Federal Arbitration Act, Delaware state law, and applicable U.S. federal law will govern these Terms. You hereby consent to the exclusive jurisdiction of the state and federal courts located in the state of Delaware, USA.
+
+### Export Controls
+You agree to use the Services in compliance with U.S. export control laws, and that you will not export the Services or any of its code, data, or other components to countries, persons or entities prohibited by such laws.
+
+### Entire Agreement
+These Terms and the documents incorporated herein by reference are the entire agreement between you and us with respect to the Services and replace and supersede all prior and contemporaneous understandings and agreements related thereto.
+
+### Assignment
+We may assign these Terms, in whole or in part, to any person or entity at any time without your consent. You may not assign these Terms without our prior written consent, and any unauthorized assignment by you shall be automatically null and void.
+
+### Notice
+We may provide you with notice by any means, including via postings on the Services or via email. Unless otherwise specified in these Terms, all notices to us shall be sent to legal@teal.fm.
+
+### Severability; Waiver
+Our failure to enforce any right or provision of these Terms will not be considered a waiver of such right or provision. If for any reason a court of competent jurisdiction finds any provision of these Terms invalid or unenforceable, that provision will be enforced to the maximum extent permissible, and the other provisions of these Terms will remain in full force and effect.
+
+### Consent to Electronic Communications
+By using the Services, you consent to receiving certain electronic communications from us. You agree that any notices, agreements, disclosures, or other communications that we send to you electronically will satisfy any legal communication requirements, including that those communications be in writing.
+
+## Contact
+
+If you have questions about these Terms of Service, please contact us at:
+
+- **Email:** legal@teal.fm
+
+---
+
+*By using teal.town, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.*
