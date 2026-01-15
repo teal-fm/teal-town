@@ -18,10 +18,9 @@
       (async () => {
         // Get handle or DID from query param
         const params = new URLSearchParams(window.location.search);
-        const identifier =
-          params.get("handle") || params.get("did") || params.get("id");
-
-        if (!identifier) {
+        const handle = params.get("handle");
+        const did = params.get("did");
+        if (!handle && !did) {
           const pre = document.getElementById("out");
           pre.innerHTML = `hello!<br><br>please provide a handle or DID as a query parameter:<br>?handle=example.bsky.social<br>or<br>?did=did:plc:...`;
           return;
