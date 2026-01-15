@@ -1,0 +1,186 @@
+<html>
+  <head>
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body style="pointer-events: auto">
+    <pre
+      id="out"
+      style="
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+        pointer-events: auto;
+        margin: 0;
+        font-family: monospace;
+      "
+    ></pre>
+
+    <script>
+      (async () => {
+        // Get handle or DID from query param
+        const params = new URLSearchParams(window.location.search);
+        const identifier =
+          params.get("handle") || params.get("did") || params.get("id");
+
+        if (!identifier) {
+          const pre = document.getElementById("out");
+          pre.innerHTML = `hello!<br><br>please provide a handle or DID as a query parameter:<br>?handle=example.bsky.social<br>or<br>?did=did:plc:...`;
+          return;
+        }
+
+        try {
+          // Resolve identifier to DID and handle
+          const resolveUrl = new URL(
+            "https://slingshot.mmatt.net/xrpc/com.bad-example.identity.resolveMiniDoc"
+          );
+          resolveUrl.searchParams.set("identifier", identifier);
+          const resolveRes = await fetch(resolveUrl)
+            .then((r) => r.json())
+            .catch(() => null);
+
+          if (!resolveRes || !resolveRes.did) {
+            throw new Error("Could not resolve identifier");
+          }
+
+          const did = resolveRes.did;
+          const handle = resolveRes.handle || identifier;
+
+          // Get PDS from resolveMiniDoc response
+          // PDS might be in different fields: pds, serviceEndpoint, or needs to be derived
+          let pds = resolveRes.pds || resolveRes.serviceEndpoint || null;
+
+          // If PDS is a URL, extract just the hostname
+          if (pds && pds.startsWith("http")) {
+            try {
+              pds = new URL(pds).hostname;
+            } catch {
+              // If URL parsing fails, use as-is
+            }
+          }
+
+          // Check if user is from teal.town by checking PDS
+          const isFromTealTown = pds === "teal.town";
+
+          // If not from teal.town, show message with their PDS
+          if (!isFromTealTown) {
+            // If we don't have PDS, try to extract from handle domain as fallback
+            if (!pds && handle && handle.includes(".")) {
+              pds = handle.split(".").slice(-2).join(".");
+            }
+            const pdsDisplay = pds || "unknown";
+
+            // Build output
+            const lines = [];
+            lines.push(
+              `this user isn't from this neighborhood, they can be found at ${pdsDisplay}`
+            );
+            lines.push(``);
+            lines.push(`<a href="/">🏠 go home</a>`);
+            lines.push(
+              `<a href="https://pdsmoover.com/moover/teal.town">🚚 move to town</a>`
+            );
+
+            const pre = document.getElementById("out");
+            pre.innerHTML = lines.join("\n");
+            return;
+          }
+
+          // Fetch profile information from slingshot
+          const profileUri = `at://${did}/app.bsky.actor.profile/self`;
+          const profileUrl = new URL(
+            "https://slingshot.mmatt.net/xrpc/com.bad-example.repo.getUriRecord"
+          );
+          profileUrl.searchParams.set("at_uri", profileUri);
+          const profileRes = await fetch(profileUrl)
+            .then((r) => r.json())
+            .catch(() => null);
+
+          const profile = profileRes?.value || null;
+
+          // If no profile found, show fallback
+          if (!profile) {
+            throw new Error("Profile not found");
+          }
+
+          // Extract avatar URL - handle both string and blob object formats
+          let avatarUrl = null;
+          const avatar = profile?.avatar;
+          if (avatar) {
+            if (typeof avatar === "string") {
+              avatarUrl = avatar;
+            } else if (typeof avatar === "object") {
+              // Handle blob reference object - extract CID and mimeType
+              const cid =
+                avatar.ref?.$link ||
+                avatar.ref?.link ||
+                avatar.ref ||
+                avatar.link ||
+                avatar.cid;
+              if (cid) {
+                // Get mimeType from avatar object or default to jpeg
+                const mimeType = avatar.mimeType
+                  ? avatar.mimeType.split("/")[1] // Extract format from "image/jpeg"
+                  : "jpeg";
+                // Use Bluesky CDN format: /img/avatar/plain/{did}/{cid}@{mimeType}
+                avatarUrl = `https://cdn.bsky.app/img/avatar/plain/${did}/${cid}@${mimeType}`;
+              }
+            }
+          }
+
+          const displayName = profile?.displayName || null;
+
+          // Build output with ASCII stick figure
+          const lines = [];
+
+          // Create stick figure and center "hello! I am {handle}" next to it
+          const greeting = `hello! I am ${handle}`;
+          // if bailey replace the o with a 🤠
+          let stickFigureLine0 = "\\ o /";
+          if (handle === "bailey.teal.town") {
+            stickFigureLine0 = "\\ 🤠 /";
+          }
+          const stickFigureLines = [stickFigureLine0, "  |", " / \\"];
+
+          // Center the greeting vertically against the stick figure
+          // Stick figure is 3 lines, greeting goes on middle line
+          lines.push(stickFigureLines[0] + "     "); // Top of stick figure
+          lines.push(stickFigureLines[1] + `   ${greeting}`); // Middle with greeting
+          lines.push(stickFigureLines[2] + "     "); // Bottom of stick figure
+          lines.push(``);
+
+          lines.push(
+            `<a href="https://bsky.app/profile/${did}">🦋 bluesky profile</a>`
+          );
+          lines.push(
+            `<a href="https://pdsls.dev/at://${did}">📁 pdsls link</a>`
+          );
+
+          if (avatarUrl) {
+            lines.push(
+              `<img src="${avatarUrl}" alt="profile picture" style="display: block; max-width: 200px; margin: 1em 0;" />`
+            );
+          }
+
+          lines.push(`<a href="/">🏠 go home</a>`);
+          lines.push(
+            `<a href="https://pdsmoover.com/moover/teal.town">🚚 move to town</a>`
+          );
+
+          const pre = document.getElementById("out");
+          pre.innerHTML = lines.join("\n");
+        } catch (error) {
+          // Show fallback page
+          const lines = [];
+          lines.push(`that resident couldn't be found :(`);
+          lines.push(``);
+          lines.push(`<a href="/">🏠 go home</a>`);
+          lines.push(
+            `<a href="https://pdsmoover.com/moover/teal.town">🚚 move to town</a>`
+          );
+
+          const pre = document.getElementById("out");
+          pre.innerHTML = lines.join("\n");
+        }
+      })();
+    </script>
+  </body>
+</html>
