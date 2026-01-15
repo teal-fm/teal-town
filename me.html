@@ -16,22 +16,16 @@
 
     <script>
       (async () => {
-        // Get handle or DID from query param
-        const params = new URLSearchParams(window.location.search);
-        const handle = params.get("handle");
-        const did = params.get("did");
-        if (!handle && !did) {
-          const pre = document.getElementById("out");
-          pre.innerHTML = `hello!<br><br>please provide a handle or DID as a query parameter:<br>?handle=example.bsky.social<br>or<br>?did=did:plc:...`;
-          return;
-        }
+        // Get handle from domain (this page is served at *.teal.town)
+        const hostname = window.location.hostname;
+        let handle = hostname;
 
         try {
-          // Resolve identifier to DID and handle
+          // Resolve handle to DID and get full handle
           const resolveUrl = new URL(
             "https://slingshot.mmatt.net/xrpc/com.bad-example.identity.resolveMiniDoc"
           );
-          resolveUrl.searchParams.set("identifier", identifier);
+          resolveUrl.searchParams.set("identifier", handle);
           const resolveRes = await fetch(resolveUrl)
             .then((r) => r.json())
             .catch(() => null);
@@ -41,7 +35,7 @@
           }
 
           const did = resolveRes.did;
-          const handle = resolveRes.handle || identifier;
+          handle = resolveRes.handle || handle;
 
           // Get PDS from resolveMiniDoc response
           // PDS might be in different fields: pds, serviceEndpoint, or needs to be derived
