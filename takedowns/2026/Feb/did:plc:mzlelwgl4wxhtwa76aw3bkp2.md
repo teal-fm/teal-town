@@ -11,8 +11,8 @@ Suspected bot account, as reported (and confirmed by moderator) 1.6 thousand aut
 
 ### Related Takedowns:
 
-[did:plc:e2at25qcoavynbtrcmadv7ok](./did:plc:e2at25qcoavynbtrcmadv7ok.md)
-[did:plc:yfxqh76jl5za2hqb2tf7z3fp](./did:plc:yfxqh76jl5za2hqb2tf7z3fp.md)
+- [did:plc:e2at25qcoavynbtrcmadv7ok](./did:plc:e2at25qcoavynbtrcmadv7ok.md)
+- [did:plc:yfxqh76jl5za2hqb2tf7z3fp](./did:plc:yfxqh76jl5za2hqb2tf7z3fp.md)
 
 ## Contact
 Contact [admin@teal.town](mailto:admin@teal.town) to appeal.
