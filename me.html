@@ -23,10 +23,14 @@
         try {
           // Resolve handle to DID and get full handle
           const resolveUrl = new URL(
-            "https://slingshot.mmatt.net/xrpc/com.bad-example.identity.resolveMiniDoc"
+            "https://slingshot.microcosm.blue/xrpc/com.bad-example.identity.resolveMiniDoc",
           );
           resolveUrl.searchParams.set("identifier", handle);
-          const resolveRes = await fetch(resolveUrl)
+          const resolveRes = await fetch(resolveUrl, {
+            headers: {
+              "User-Agent": "teal.town-me/1.0",
+            },
+          })
             .then((r) => r.json())
             .catch(() => null);
 
@@ -64,12 +68,12 @@
             // Build output
             const lines = [];
             lines.push(
-              `this user isn't from this neighborhood, they can be found at ${pdsDisplay}`
+              `this user isn't from this neighborhood, they can be found at ${pdsDisplay}`,
             );
             lines.push(``);
             lines.push(`<a href="https://teal.town">🏠 go home</a>`);
             lines.push(
-              `<a href="https://pdsmoover.com/moover/teal.town">🚚 move to town</a>`
+              `<a href="https://pdsmoover.com/moover/teal.town">🚚 move to town</a>`,
             );
 
             const pre = document.getElementById("out");
@@ -80,10 +84,14 @@
           // Fetch profile information from slingshot
           const profileUri = `at://${did}/app.bsky.actor.profile/self`;
           const profileUrl = new URL(
-            "https://slingshot.mmatt.net/xrpc/com.bad-example.repo.getUriRecord"
+            "https://slingshot.microcosm.blue/xrpc/com.bad-example.repo.getUriRecord",
           );
           profileUrl.searchParams.set("at_uri", profileUri);
-          const profileRes = await fetch(profileUrl)
+          const profileRes = await fetch(profileUrl, {
+            headers: {
+              "User-Agent": "teal.town-me/1.0",
+            },
+          })
             .then((r) => r.json())
             .catch(() => null);
 
@@ -141,21 +149,21 @@
           lines.push(``);
 
           lines.push(
-            `<a href="https://bsky.app/profile/${did}">🦋 bluesky profile</a>`
+            `<a href="https://bsky.app/profile/${did}">🦋 bluesky profile</a>`,
           );
           lines.push(
-            `<a href="https://pdsls.dev/at://${did}">📁 pdsls link</a>`
+            `<a href="https://pdsls.dev/at://${did}">📁 pdsls link</a>`,
           );
 
           if (avatarUrl) {
             lines.push(
-              `<img src="${avatarUrl}" alt="profile picture" style="display: block; max-width: 200px; margin: 1em 0;" />`
+              `<img src="${avatarUrl}" alt="profile picture" style="display: block; max-width: 200px; margin: 1em 0;" />`,
             );
           }
 
           lines.push(`<a href="https://teal.town">🏠 go home</a>`);
           lines.push(
-            `<a href="https://pdsmoover.com/moover/teal.town">🚚 move to town</a>`
+            `<a href="https://pdsmoover.com/moover/teal.town">🚚 move to town</a>`,
           );
 
           const pre = document.getElementById("out");
@@ -167,7 +175,7 @@
           lines.push(``);
           lines.push(`<a href="https://teal.town">🏠 go home</a>`);
           lines.push(
-            `<a href="https://pdsmoover.com/moover/teal.town">🚚 move to town</a>`
+            `<a href="https://pdsmoover.com/moover/teal.town">🚚 move to town</a>`,
           );
 
           const pre = document.getElementById("out");

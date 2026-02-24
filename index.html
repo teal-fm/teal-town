@@ -19,7 +19,7 @@
         const PDS_URL = "teal.town";
         // --- fetch server info ---
         const serverInfo = await fetch(
-          `https://${PDS_URL}/xrpc/com.atproto.server.describeServer`
+          `https://${PDS_URL}/xrpc/com.atproto.server.describeServer`,
         )
           .then((r) => r.json())
           .catch(() => ({}));
@@ -38,15 +38,19 @@
           dids.map(async (did) => {
             try {
               const url = new URL(
-                "https://slingshot.mmatt.net/xrpc/com.bad-example.identity.resolveMiniDoc"
+                "https://slingshot.microcosm.blue/xrpc/com.bad-example.identity.resolveMiniDoc",
               );
               url.searchParams.set("identifier", did);
-              const res = await fetch(url).then((r) => r.json());
+              const res = await fetch(url, {
+                headers: {
+                  "User-Agent": "teal.town-homepage/1.0",
+                },
+              }).then((r) => r.json());
               return { handle: res.handle || null, did };
             } catch {
               return null;
             }
-          })
+          }),
         );
 
         const valid = handles.filter(Boolean);
@@ -82,7 +86,7 @@
             const padded = plain.padEnd(offset, " ");
             const html = padded.replace(
               links.privacyPolicy,
-              `<a href="${links.privacyPolicy}">${links.privacyPolicy}</a>`
+              `<a href="${links.privacyPolicy}">${links.privacyPolicy}</a>`,
             );
             lines.push(html + ` \\ o / `);
           }
@@ -91,7 +95,7 @@
             const padded = plain.padEnd(offset, " ");
             const html = padded.replace(
               links.termsOfService,
-              `<a href="${links.termsOfService}">${links.termsOfService}</a>`
+              `<a href="${links.termsOfService}">${links.termsOfService}</a>`,
             );
             lines.push(html + `💼 |`);
           }
