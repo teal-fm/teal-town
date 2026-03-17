@@ -19,6 +19,7 @@ Suspected bot account, as reported (and confirmed by moderator) 1.6 thousand aut
 - [did:plc:hlti5t6voolbckv2jmvdtodt](./did:plc:hlti5t6voolbckv2jmvdtodt.md)
 - [did:plc:fbbyoktryp2nwbpsa5qkpjbp](./did:plc:fbbyoktryp2nwbpsa5qkpjbp.md)
 - [did:plc:f2or5nyehheqsztspdybef6p](../Mar/did:plc:f2or5nyehheqsztspdybef6p.md)
+- [did:plc:zrjva6z7afvzidtolm5fwfwr](../Mar/did:plc:zrjva6z7afvzidtolm5fwfwr.md)
 
 ## Contact
 
