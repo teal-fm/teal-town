@@ -2,7 +2,7 @@
 Subject: did:plc:zrjva6z7afvzidtolm5fwfwr
 Action: Takedown
 Moderator: matt.teal.town (did:plc:44354ot2ptyungtazpo4mmd7)
-Date: 3/16/2026
+Date: 3/17/2026
 ```
 
 ## Reason
